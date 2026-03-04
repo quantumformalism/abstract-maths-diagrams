@@ -1,0 +1,21 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,positioning}
+
+\begin{document}
+\begin{tikzpicture}[>=Stealth, node distance=2.8cm and 5.2cm]
+
+\node (V1L) {$V_1$};
+\node (V1R) [right=of V1L] {$V_1$};
+
+\node (V2L) [below=of V1L] {$V_2$};
+\node (V2R) [below=of V1R] {$V_2$};
+
+\draw[->] (V1L) -- node[above] {$\rho_1(g)$} (V1R);
+\draw[->] (V2L) -- node[above] {$\rho_2(g)$} (V2R);
+
+\draw[->] (V1L) -- node[left]  {$L$} (V2L);
+\draw[->] (V1R) -- node[right] {$L$} (V2R);
+
+\end{tikzpicture}
+\end{document}
