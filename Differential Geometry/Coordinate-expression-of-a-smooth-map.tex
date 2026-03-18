@@ -1,0 +1,31 @@
+\documentclass{article}
+
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz-cd}
+
+\begin{document}
+
+\[
+\begin{tikzcd}[
+    row sep=3.5cm,
+    column sep=5.2cm,
+    cells={nodes={inner sep=2pt}},
+    every label/.append style={font=\normalsize}
+]
+U \subseteq X
+    \arrow[r, "{f|_U}"]
+    \arrow[d, "\phi"', shift right=2.4ex]
+&
+V \subseteq Y
+    \arrow[d, "\psi"]
+\\
+\phi(U) \subseteq \mathbb{R}^n
+    \arrow[u, red, "{\phi^{-1}}", shift right=2.4ex]
+    \arrow[r, "{\psi \circ (f|_U) \circ \phi^{-1}}"']
+&
+\psi(V) \subseteq \mathbb{R}^k
+\end{tikzcd}
+\]
+
+\end{document}
